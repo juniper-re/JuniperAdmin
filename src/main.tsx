@@ -7,21 +7,23 @@ import {
 } from 'react-router-dom'
 import './index.css'
 import { Root } from 'pages/Root'
-import { Onboarding } from 'pages/Onboarding'
+import { Layout } from 'antd'
+import { Drawer } from 'components/nav/Drawer'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />
-  }, 
-  {
-    path: '/onboarding',
-    element: <Onboarding />
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Layout style={{minHeight: '100vh'}}>
+      <Drawer />
+      <Layout style={{padding: '4em'}}>
+        <RouterProvider router={router} />
+      </Layout>
+    </Layout>
   </React.StrictMode>
 )
