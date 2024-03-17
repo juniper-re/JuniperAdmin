@@ -6,22 +6,25 @@ import {
   createBrowserRouter
 } from 'react-router-dom'
 import './index.css'
+import 'styles/fonts'
 import { Root } from 'pages/Root'
-import { Onboarding } from 'pages/Onboarding'
+import { Layout } from 'antd'
+import { Drawer } from 'components/nav/Drawer'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />
-  }, 
-  {
-    path: '/onboarding',
-    element: <Onboarding />
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Layout style={{ height: '100vh' }}>
+      <Drawer />
+      <Layout style={{ overflowY: 'auto' }}>
+        <RouterProvider router={router} />
+      </Layout>
+    </Layout>
   </React.StrictMode>
 )

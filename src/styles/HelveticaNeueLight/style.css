@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "HelveticaNeue-Light";
+    src: url("fonts/HelveticaNeue-Light.eot"); /* IE9*/
+    src: url("fonts/HelveticaNeue-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("fonts/HelveticaNeue-Light.woff2") format("woff2"), /* chrome、firefox */
+    url("fonts/HelveticaNeue-Light.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+  }
+
+  .HelveticaNeue-Light {
+    font-family: "HelveticaNeue-Light";
+  }

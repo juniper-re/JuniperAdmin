@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "HelveticaNeue-Thin";
+    src: url("fonts/HelveticaNeue-Thin.eot"); /* IE9*/
+    src: url("fonts/HelveticaNeue-Thin.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("fonts/HelveticaNeue-Thin.woff2") format("woff2"), /* chrome、firefox */
+    url("fonts/HelveticaNeue-Thin.woff") format("woff"), /* chrome、firefox */
+    url("fonts/HelveticaNeue-Thin.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+  }
+
+  .HelveticaNeue-Thin {
+    font-family: "HelveticaNeue-Thin";
+  }

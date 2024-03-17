@@ -1,14 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
 export default {
   corePlugins: {
-    preflight: false
   },
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#00848E'
+      }
+    },
   },
   plugins: [],
 }

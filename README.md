@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Juniper Admin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Running the tool
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+npm i
+npm run dev
 ```
+Then navigate to localhost:3000
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Whitelabel tool (Theme Creator)
+### Creating theme
+You can change any individual field here, and any changes are persisted until you hit "clear".
+Once you are complete with your personalization of the elements, hit "export"
+
+This will create a theme.json file. 
+
+Take that file, and copy it into `src/branding/BrandingOverrides` folder of JuniperWebClient.
+
+Test the adjustments made
+
+publish JuniperWebClient as normal
+
+# IMPORTANT
+you must place the correct Tenant ID within the whitelabel application. Without this, the mobile app will not pick up the adjusments, and apply the themes the legacy way.
+
