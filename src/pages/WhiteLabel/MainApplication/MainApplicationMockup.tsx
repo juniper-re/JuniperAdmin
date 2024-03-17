@@ -6,8 +6,9 @@ export const MainApplicationMockup: React.FC = () => {
   return (
     <div className="aspect-video overflow-hidden rounded-lg border border-zinc-100 shadow-lg">
       <div className="grid h-full grid-cols-12">
-        <div className='col-span-2 flex h-full p-2' style={{ backgroundColor: brandingOverrides.colours.primary.dark }}>
+        <div className='relative col-span-2 flex h-full p-2' style={{ backgroundColor: brandingOverrides.colours.primary.dark }}>
           <div className="mt-11 h-8 w-full rounded-sm" style={{ backgroundColor: brandingOverrides.colours.primary.regular }}></div>
+          <img src={brandingOverrides.images.logo.mainApplication} alt="" className="absolute bottom-4 h-2" />
         </div>
         <div className="col-start-3 col-end-13 p-5">
           <h3 className={`${brandingOverrides.fonts.secondaryHeading} text-lg`} style={{ color: brandingOverrides.colours.secondary.dark }}>Secondary Heading</h3>

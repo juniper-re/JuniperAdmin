@@ -30,6 +30,7 @@ export interface IBrandingOverrides {
     }
 
     text: {
+      lightest: string
       regular: string
       light: string
       nav: string
@@ -59,8 +60,8 @@ export interface IBrandingOverrides {
   images: {
     signInBackground: string
     logo: {
-      regular: string
-      large: string
+      login: string
+      mainApplication: string
     }
   }
 
@@ -69,10 +70,7 @@ export interface IBrandingOverrides {
     walkthroughSignatureTermsAndConditions: string
     homeOwnerWalkthroughSignatureTermsAndConditions: string
   }
-
-  qrCode: {
-    data: ITenantID
-  }
+  tenantGUID: string
 }
 
 export type IFont =

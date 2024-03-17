@@ -44,19 +44,19 @@ export const Other: React.FC = () => {
       </div>
       <div className='flex-grow'>
         <h2>QR Code</h2>
-        <p className='my-2' aria-label='tenantId'>Tenant ID</p>
+        <p className='my-2' aria-label='tenantId'>Tenant GUID</p>
         <input
           name='tenantId'
-          value={brandingOverrides.qrCode.data}
+          value={brandingOverrides.tenantGUID}
           className='w-full'
           onChange={(e) => {
             setBrandingOverrides({
               ...brandingOverrides,
-              qrCode: { data: e.target.value }
+              tenantGUID: e.target.value
             })
           }}
         />
-        <QRCode className='m-3' value={brandingOverrides.qrCode.data} />
+        <QRCode className='m-3' value={brandingOverrides.tenantGUID} />
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
-import { UploadOutlined } from '@ant-design/icons'
-import { Button, Form } from 'antd'
+import { Form } from 'antd'
 import React, { useContext } from 'react'
 import { BrandingOverrideContext } from '..'
+import { handleImageSubmit } from '../utilities/handleImageUpload'
 
 export const LoginForm: React.FC = () => {
   const { brandingOverrides, setBrandingOverrides } = useContext(BrandingOverrideContext)
@@ -10,13 +10,54 @@ export const LoginForm: React.FC = () => {
       <Form.Item
         label="Logo"
       >
-        <Button icon={<UploadOutlined />}>Upload</Button>
+        <input
+          type='file'
+          name="logoUploader"
+          accept='.png'
+          onChange={(e) => {
+            handleImageSubmit(e)
+              .then(data => {
+                if (data) {
+                  setBrandingOverrides({
+                    ...brandingOverrides,
+                    images: {
+                      ...brandingOverrides.images,
+                      logo: {
+                        ...brandingOverrides.images.logo,
+                        login: data
+                      }
+                    }
+                  })
+                }
+              })
+              .catch(e => { alert('error uploading image' + e) })
+          }}
+        />
       </Form.Item>
 
       <Form.Item
         label="Background"
       >
-        <Button icon={<UploadOutlined />}>Upload</Button>
+        <input
+          type='file'
+          name="logoUploader"
+          accept='.jpg, .png, .jpeg'
+          onChange={(e) => {
+            handleImageSubmit(e)
+              .then(data => {
+                if (data) {
+                  setBrandingOverrides({
+                    ...brandingOverrides,
+                    images: {
+                      ...brandingOverrides.images,
+                      signInBackground: data
+                    }
+                  })
+                }
+              })
+              .catch(e => { alert('error uploading image' + e) })
+          }}
+        />
       </Form.Item>
 
       <Form.Item

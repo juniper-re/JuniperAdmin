@@ -41,6 +41,7 @@ export const handleColourChange = (currentBranding: IBrandingOverrides, newColou
       darker: transformToDarker(color).hex(),
       lighter: transformToLighter(color).hex()
     }
+    newBrandingOverrides.colours.util.link = secondary.dark
     newBrandingOverrides.colours.secondary = secondary
     break
   }
