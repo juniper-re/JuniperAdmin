@@ -6,6 +6,7 @@ import {
   createBrowserRouter
 } from 'react-router-dom'
 import './index.css'
+import 'styles/fonts'
 import { Root } from 'pages/Root'
 import { Layout } from 'antd'
 import { Drawer } from 'components/nav/Drawer'
@@ -19,9 +20,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Layout style={{minHeight: '100vh'}}>
+    <Layout style={{ height: '100vh' }}>
       <Drawer />
-      <Layout style={{padding: '4em'}}>
+      <Layout style={{ overflowY: 'auto' }}>
         <RouterProvider router={router} />
       </Layout>
     </Layout>

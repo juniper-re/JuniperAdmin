@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:tailwindcss/recommended"
     ],
     "overrides": [
         {
@@ -31,6 +32,16 @@ module.exports = {
     "rules": {
         "indent": ["error", 2],
         "import/order": "error",
-        "semi": "always"
+        "semi": "warn",
+        "tailwindcss/migration-from-tailwind-2": "off", 
+        "tailwindcss/no-custom-classname": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/indent": 'off'
+    },
+    "settings":{
+        tailwindcss:{
+            config:'tailwind.config.js'
+        }
     }
 }

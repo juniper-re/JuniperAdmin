@@ -1,0 +1,19 @@
+.large-text {
+  font-size: 5cqh;
+}
+
+.medium-text {
+  font-size: 3cqh;
+}
+
+.small-text {
+  font-size: 1.5cqh;
+}
+
+.form-input-size {
+  height: 6cqh
+}
+
+.mockup-container {
+  container: mockup / size
+}

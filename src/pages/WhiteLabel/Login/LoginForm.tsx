@@ -1,13 +1,10 @@
-import { UploadOutlined } from "@ant-design/icons";
-import { Button, Form, Input} from "antd";
-import TextArea from "antd/es/input/TextArea";
-import React from "react";
-
-type LoginFormType = {
-
-}
+import { UploadOutlined } from '@ant-design/icons'
+import { Button, Form } from 'antd'
+import React, { useContext } from 'react'
+import { BrandingOverrideContext } from '..'
 
 export const LoginForm: React.FC = () => {
+  const { brandingOverrides, setBrandingOverrides } = useContext(BrandingOverrideContext)
   return (
     <Form layout="vertical">
       <Form.Item
@@ -22,13 +19,19 @@ export const LoginForm: React.FC = () => {
         <Button icon={<UploadOutlined />}>Upload</Button>
       </Form.Item>
 
-      <Form.Item 
+      <Form.Item
         label="Tagline"
       >
-        <Input.TextArea></Input.TextArea>
-     </Form.Item>
-
-
+        <textarea value={brandingOverrides.text.loginScreenDescription} className='w-full resize-none rounded-md border border-gray-300 p-1' onChange={(e) => {
+          setBrandingOverrides({
+            ...brandingOverrides,
+            text: {
+              ...brandingOverrides.text,
+              loginScreenDescription: e.target.value
+            }
+          })
+        }} />
+      </Form.Item>
     </Form>
   )
 }

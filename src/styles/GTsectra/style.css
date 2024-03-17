@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'GT Sectra Fine Book';
+    src:  url('fonts/GT-Sectra-Fine-Book.eot?vc4doy');
+    src:  url('fonts/GT-Sectra-Fine-Book.eot?vc4doy#iefix') format('embedded-opentype'),
+      url('fonts/GT-Sectra-Fine-Book.ttf?vc4doy') format('truetype'),
+      url('fonts/GT-Sectra-Fine-Book.woff?vc4doy') format('woff');
+      /* url('fonts/GT-Sectra-Fine-Book.svg?vc4doy#icomoon') format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  .GT-Sectra {
+    font-family: 'GT Sectra Fine Book';
+  }

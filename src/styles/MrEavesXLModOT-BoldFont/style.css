@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'MrEavesXLModOT-Bold';
+    src: url('fonts/MrEavesXLModOT-Bold.eot');
+    src: url('fonts/MrEavesXLModOT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MrEavesXLModOT-Bold.woff2') format('woff2'),
+        url('fonts/MrEavesXLModOT-Bold.woff') format('woff'),
+        url('fonts/MrEavesXLModOT-Bold.ttf') format('truetype'),
+        url('fonts/MrEavesXLModOT-Bold.svg#MrEavesXLModOT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.MrEavesXLModOT-Bold{
+    font-family: 'MrEavesXLModOT-Bold';
+}

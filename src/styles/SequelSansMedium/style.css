@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Sequel Sans Medium Body';
+    src: url('fonts/SequelSans-MediumBody.eot');
+    src: url('fonts/SequelSans-MediumBody.eot?#iefix') format('embedded-opentype'),
+        url('fonts/SequelSans-MediumBody.woff2') format('woff2'),
+        url('fonts/SequelSans-MediumBody.woff') format('woff'),
+        url('fonts/SequelSans-MediumBody.ttf') format('truetype'),
+        url('fonts/SequelSans-MediumBody.svg#SequelSans-MediumBody') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.Sequel-Sans-Medium-Body {
+    font-family: 'Sequel Sans Medium Body';
+}

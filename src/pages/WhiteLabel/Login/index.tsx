@@ -1,21 +1,17 @@
-import { Col, Row } from "antd"
-import React from "react"
-import { LoginForm } from "./LoginForm"
-import { LoginScreenMockup } from "./LoginScreenMockup"
+import React from 'react'
+import { LoginForm } from './LoginForm'
+import { LoginScreenMockup } from './LoginScreenMockup'
 
 export const Login: React.FC = () => {
-
-
   return (
-    <Row justify={"space-between"}>
-      <Col span={10}>
+    <div className='grid grid-cols-12'>
+      <div className='relative col-span-4 flex flex-col '>
+        <h2>Login Screen</h2>
         <LoginForm />
-      </Col>
-      <Col span={10}>
-        <LoginScreenMockup />
-      </Col>
-    </Row>
+      </div>
+      <div className='col-span-7 col-start-6'>
+        <LoginScreenMockup tagLine="Providing home and homeowner wellness" />
+      </div>
+    </div>
   )
-
-
 }
