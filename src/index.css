@@ -8,4 +8,10 @@
     @apply mb-7 text-2xl text-gray-400;
     font-family: 'DM Serif Display'
   }
+  input {
+    @apply rounded-md border border-gray-300 p-1;
+  }
+  textarea{
+    @apply rounded-md  border resize-none border-gray-300 p-1;
+  }
 }
