@@ -14,6 +14,7 @@ export const defaults: IBrandingOverrides = {
       lighter: '#E0F5F5' // 77% brighter
     },
     tertiary: {
+      light: '#DFE3E8',
       regular: '#DFE3E8',
       dark: '#C4CDD5'
     },
@@ -39,12 +40,16 @@ export const defaults: IBrandingOverrides = {
       dark: '#212B36',
       background: '#41457C',
       link: '#54938B',
+      sky: {
+        regular: '#285B9B',
+        dark: '#C4CDD5'
+      },
       toast: {
         success: '#154246',
         error: '#5A302F',
         shadow: '#B7ECEC'
       },
-      tableHover: '#7DB4ACE6',
+      tableHover: '#ffffff',
       textAreaFocus: '#36B5AC'
     }
   },

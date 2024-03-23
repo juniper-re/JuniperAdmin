@@ -42,12 +42,14 @@ export const handleColourChange = (currentBranding: IBrandingOverrides, newColou
       lighter: transformToLighter(color).hex()
     }
     newBrandingOverrides.colours.util.link = secondary.dark
+    newBrandingOverrides.colours.util.tableHover = color.alpha(0.1).hexa()
     newBrandingOverrides.colours.secondary = secondary
     break
   }
 
   case EColourSelector.tertiary:{
     const tertiary: IBrandingOverrides['colours']['tertiary'] = {
+      light: transformToLighter(color).hex(),
       regular: color.hex(),
       dark: transformToDark(color).hex()
     }
