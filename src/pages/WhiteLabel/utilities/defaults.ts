@@ -1,6 +1,8 @@
 import { type IBrandingOverrides } from '../types/brandingOverrides'
+import npmPackage from '../../../../package.json'
 
 export const defaults: IBrandingOverrides = {
+  version: npmPackage.version,
   colours: {
     primary: {
       regular: '#43467F',

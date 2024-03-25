@@ -1,12 +1,20 @@
 import { type IBrandingOverrides } from '../types/brandingOverrides'
+import npmPackage from '../../../../package.json'
 import { defaults } from './defaults'
 
 export const getBrandingLocalStorage = (): IBrandingOverrides => {
   const localStorageStringObject = localStorage.getItem(import.meta.env.VITE_WHITE_LABEL_STORAGE_KEY)
-  if (localStorageStringObject === null) {
+  try {
+    const localStorageObject = JSON.parse(localStorageStringObject ?? '')
+    if (localStorageStringObject === null || localStorageObject.version !== npmPackage.version) {
+      setBrandingLocalStorage(defaults)
+      return { ...defaults }
+    }
+  } catch (e) {
     setBrandingLocalStorage(defaults)
     return { ...defaults }
   }
+
   return JSON.parse(localStorageStringObject)
 }
 
