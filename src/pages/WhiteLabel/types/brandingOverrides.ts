@@ -1,4 +1,5 @@
 export interface IBrandingOverrides {
+  version: string
   colours: {
     primary: {
       regular: string
