@@ -18,8 +18,19 @@ export const MainApplicationMockup: React.FC = () => {
             Suspendisse nec erat vitae sem eleifend ullamcorper vitae et leo. Nulla dignissim ex nec diam iaculis ultricies. Aliquam eget arcu eu justo molestie iaculis. Nam imperdiet nibh vitae dui pharetra vulputate.
             Nulla porta vestibulum suscipit. Nulla felis eros, ullamcorper ultricies enim pharetra, egestas luctus magna.
           </p>
-          <div className='float-left my-3 w-14 rounded-sm p-1 text-center text-xs text-white' style={{ backgroundColor: brandingOverrides.colours.secondary.dark }}>Button</div>
-          <div className='float-left m-3 w-28 rounded-sm p-1 text-center text-xs text-white' style={{ backgroundColor: brandingOverrides.colours.tertiary.dark }}>Secondary Button</div>
+          <div className='flex flex-row'>
+            <div className='my-3 w-14 rounded-sm p-1 text-center text-xs text-white' style={{ backgroundColor: brandingOverrides.colours.secondary.dark }}>Button</div>
+            <div className='m-3 w-28 rounded-sm p-1 text-center text-xs text-white' style={{ backgroundColor: brandingOverrides.colours.tertiary.dark }}>Secondary Button</div>
+          </div>
+          <h3 className={`${brandingOverrides.fonts.secondaryHeading} text-lg`} style={{ color: brandingOverrides.colours.secondary.dark }}>Dividers</h3>
+          <div className="grid grid-cols-4 divide-x">
+            <div className="h-10" style={{ borderColor: brandingOverrides.colours.util.sky?.regular }}></div>
+            <div className="h-10" style={{ borderColor: brandingOverrides.colours.util.sky?.regular }}></div>
+            <div className="h-10" style={{ borderColor: brandingOverrides.colours.util.sky?.regular }}></div>
+            <div className="h-10" style={{ borderColor: brandingOverrides.colours.util.sky?.regular }}></div>
+          </div>
+          <div className="border"></div>
+          <div className="h-10 my-3 p-2 rounded-md" style={{ backgroundColor: brandingOverrides.colours.util.tableHover }}>Hovered Table Element</div>
         </div>
       </div>
     </div>

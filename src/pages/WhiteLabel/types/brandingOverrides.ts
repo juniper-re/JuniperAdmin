@@ -12,6 +12,7 @@ export interface IBrandingOverrides {
       lighter: string
     }
     tertiary: {
+      light: string
       regular: string
       dark: string
     }
@@ -40,6 +41,10 @@ export interface IBrandingOverrides {
       dark: string
       background: string
       link: string
+      sky: {
+        regular: string
+        dark: string
+      }
       toast: {
         success: string
         error: string
